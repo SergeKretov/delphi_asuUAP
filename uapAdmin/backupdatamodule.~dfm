@@ -1,0 +1,30 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Left = 723
+  Top = 208
+  Height = 269
+  Width = 483
+  object MyConnection1: TMyConnection
+    Database = 'srv56074_clientcard'
+    Username = 'srv56074_admin'
+    Password = 'Bd14071978'
+    Server = 'mysql-56074.srv.hoster.ru'
+    Left = 24
+    Top = 16
+  end
+  object MyDump1: TMyDump
+    TableNames = 
+      'admlogin, agent_pay, agentlogin, Agents, altairmsg, bwaymsg, Car' +
+      'ds, Cards_go, dela, offadmlogin, offices, onceclient, pma__bookm' +
+      'ark, pma__central_columns, pma__column_info, pma__designer_setti' +
+      'ngs, pma__export_templates, pma__favorite, pma__history, pma__na' +
+      'vigationhiding, pma__pdf_pages, pma__recent, pma__relation, pma_' +
+      '_savedsearches, pma__table_coords, pma__table_info, pma__table_u' +
+      'iprefs, pma__tracking, pma__userconfig, pma__usergroups, pma__us' +
+      'ers, rlink, sotrlogin, sotrudnik, statusmsg, sud_stat'
+    Connection = MyConnection1
+    Objects = [doDatabase, doUsers, doStoredProcs, doTables, doData, doViews, doTriggers]
+    Left = 88
+    Top = 16
+  end
+end
