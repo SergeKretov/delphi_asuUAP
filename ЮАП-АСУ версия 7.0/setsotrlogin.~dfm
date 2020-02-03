@@ -1,0 +1,121 @@
+object sslogin: Tsslogin
+  Left = 191
+  Top = 124
+  BorderStyle = bsDialog
+  Caption = #1051#1086#1075#1080#1085#1099' '#1080' '#1087#1072#1088#1086#1083#1080' '#1089#1086#1090#1088#1091#1076#1085#1080#1082#1086#1074
+  ClientHeight = 214
+  ClientWidth = 590
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 128
+    Width = 63
+    Height = 13
+    Caption = #1057#1086#1090#1088#1091#1076#1085#1080#1082
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 152
+    Width = 45
+    Height = 13
+    Caption = #1055#1072#1088#1086#1083#1100
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 0
+    Width = 590
+    Height = 120
+    Align = alTop
+    DataSource = SQLData.SotrLoginDS
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'login'
+        Title.Caption = #1051#1086#1075#1080#1085
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'password'
+        Title.Caption = #1055#1072#1088#1086#1083#1100
+        Visible = True
+      end>
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 80
+    Top = 128
+    Width = 313
+    Height = 21
+    DataField = 'login'
+    DataSource = SQLData.SotrLoginDS
+    KeyField = 'sotr_id'
+    ListField = 'sotr_name'
+    ListSource = SQLData.sotrudnikDS
+    TabOrder = 1
+  end
+  object DBEdit1: TDBEdit
+    Left = 80
+    Top = 152
+    Width = 313
+    Height = 21
+    DataField = 'password'
+    DataSource = SQLData.SotrLoginDS
+    TabOrder = 2
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 8
+    Top = 176
+    Width = 378
+    Height = 25
+    DataSource = SQLData.SotrLoginDS
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+    TabOrder = 3
+    TabStop = True
+    OnClick = DBNavigator1Click
+  end
+  object Button1: TButton
+    Left = 504
+    Top = 176
+    Width = 75
+    Height = 25
+    Caption = #1047#1072#1082#1088#1099#1090#1100
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    OnClick = Button1Click
+  end
+end
