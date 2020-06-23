@@ -1,2 +1,0 @@
-inherited MyUpdateSQLEditorForm: TMyUpdateSQLEditorForm
-end

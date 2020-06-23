@@ -1,7 +1,0 @@
-[ODBC]
-DRIVER=MySQL ODBC 5.3 Unicode Driver
-UID=srv56074_admin
-COLUMN_SIZE_S32=1
-PORT=3306
-DATABASE=srv56074_clientcard
-SERVER={mysql-56074.srv.hoster.ru}
